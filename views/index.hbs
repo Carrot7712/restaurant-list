@@ -1,0 +1,63 @@
+<!-- =====index===== -->
+<!-- title -->
+<h1 id="title" class="mb-1 restaurant-show-title">
+  Set Off the Journey to Tickle Your Taste Buds...
+</h1>
+
+<!-- search bar -->
+<div class="container search-bar">
+  <div class="search-bar-outer">
+    <div class="search-bar-inner">
+      <form action="/search">
+        <h4 class="mb-2">尋找餐廳：</h4>
+        <div class="input-group">
+          <input type="text" name="keyword" class="form-control" placeholder="輸入餐廳、分類" value="" />
+          <div class="input-group-append">
+            <button class="btn btn-major" type="submit" id="search-button">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- restaurant list -->
+<div class="container d-flex justify-content-center mb-4" id="data-panel">
+  <div class="row d-flex justify-content-center col-lg-10 mx-auto">
+    {{#each restaurants}}
+    <!-- a card -->
+    <div class="col-md-4 d-flex flex-column">
+      <div class="mt-3">
+        <a href="/restaurants/{{this._id}}" class="text-secondary">
+          <div class="card mb-3">
+            <img class="card-img-top" src="{{this.image}}" alt="{{this.name}}" />
+            <div class="card-body p-3">
+              <h6 class="card-title mb-1">{{this.name}}</h6>
+
+              <div class="restaurant-category mb-1">
+                <i class="fas fa-utensils pr-2"></i> {{this.category}}
+              </div>
+
+              <span class="badge badge-pill badge-danger font-weight-normal">
+                {{this.rating}}
+                <i class="fas fa-star fa-xs"></i>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+      {{!-- buttons group --}}
+      <div class="crud-buttons align-self-end">
+        <a type="button" class="btn btn-secondary" href="./restaurants/{{this._id}}/edit">edit</a>
+        <a type="button" class="btn btn-secondary" href="./restaurants/{{this._id}}">details</a>
+        <form action="./restaurants/{{this._id}}/delete" method="POST" style="display: inline;">
+          <button type="submit" class="btn btn-secondary">delete</button>
+        </form>
+      </div>
+    </div>
+    <!-- a card -->
+    {{/each}}
+  </div>
+</div>
+<!-- =====index===== -->

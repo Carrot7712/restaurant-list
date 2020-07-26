@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>FoodAdvisor</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/png"
+    href="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/6227/restaurant-list-logo.png" />
+  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/lumen/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-715VMUUaOfZR3/rWXZJ9agJ/udwSXGEigabzUbJm2NR4/v5wpDy8c14yedZN6NL7" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/stylesheets/main.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header>
+      <!-- nav bar -->
+      <nav class="navbar navbar-light bg-light">
+        <div class="container d-flex">
+          <a class="navbar-brand" href="/">
+            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/6227/restaurant-list-logo.png"
+              width="30" height="30" class="d-inline-block align-top" alt="我的餐廳清單" />
+            FoodAdvisor
+          </a>
+          <a href="/restaurants/new" class="btn btn-primary" type="submit">create</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="banner"></div>
+
+  <!-- partial templates will replace the part of "body" here -->
+  {{{ body }}}
+
+  {{!-- pagination --}}
+  {{!-- <div class="d-flex justify-content-center ">
+  <ul class="pagination">
+    <li class="page-item active">
+      <a class="page-link" href="javascript:void(0);">1</a>
+    </li>
+  </ul>
+</div> --}}
+  <!-- Footer -->
+  <footer class="page-footer font-small stylish-color-dark pt-2">
+    <div class="container text-center text-md-left mt-3">
+      <div class="row">
+        <div class="col-md-2 d-flex justify-content-center align-items-center">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/6227/restaurant-list-logo.png"
+            width="100" height="100" alt="" />
+        </div>
+
+        <div class="col-md-4 mx-auto">
+          <h5 class="font-weight-bold text-uppercase mt-3">
+            FoodAdvisor
+          </h5>
+          <p id="footer-introdution" class="text-secondary mt-4">
+            World's Smallest Restaurant Site. Read Reviews, Compare & Book a
+            Table! Best Places to Eat. Amazing Experiences. Hidden Gems.
+          </p>
+          <div class="d-flex"></div>
+        </div>
+
+        <hr class="clearfix w-100 d-md-none" />
+        <div class="col-md-2 mx-auto">
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Explore</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Write a review</a>
+            </li>
+            <li>
+              <a href="#!">Editor's Blog</a>
+            </li>
+            <li>
+              <a href="#!">2020 Top 10 List</a>
+            </li>
+          </ul>
+        </div>
+
+        <hr class="clearfix w-100 d-md-none" />
+        <div class="col-md-2 mx-auto">
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">
+            Partnership
+          </h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Owners</a>
+            </li>
+            <li>
+              <a href="#!">Advertise with Us</a>
+            </li>
+            <li>
+              <a href="#!">Become an Affiliate</a>
+            </li>
+          </ul>
+        </div>
+
+        <hr class="clearfix w-100 d-md-none" />
+        <div class="col-md-2 mx-auto">
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">About Us</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Contact Us</a>
+            </li>
+            <li>
+              <a href="#!">Terms of Service</a>
+            </li>
+            <li>
+              <a href="#!">Privacy Police</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center mt-0 pb-4">
+      © 2020 Copyright © 2020 FoodAdvisor. All rights reserved
+    </div>
+  </footer>
+  <!-- Footer -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
