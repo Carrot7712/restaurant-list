@@ -153,3 +153,12 @@ app.post('/restaurants/:id/edit', (req, res) => {
       .catch((error) => console.log(error))
   )
 })
+
+//新增刪除的路由
+app.post('/restaurants/:id/delete', (req, res) => { 
+  const id = req.params.id
+  return Restaurant.findById(id) //去資料庫找到那筆資料
+    .then((restaurant) => restaurant.remove()) //刪除這筆資料
+    .then(() => res.redirect('/')) //完成後回首頁
+    .catch((error) => console.log(error))
+})
