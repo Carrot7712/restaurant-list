@@ -133,3 +133,8 @@ footer {
 .restaurant-detail {
   font-size: 24px;
 }
+
+/*for new.handlebars*/
+.required{
+  color: #FF4136;
+}

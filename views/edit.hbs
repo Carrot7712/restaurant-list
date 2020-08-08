@@ -1,0 +1,120 @@
+<form action="/restaurants/{{restaurant._id}}/edit" method="POST" id="create">
+  <div class="container mt-3 mb-4">
+    <div class="row">
+
+      <div class=" col-12 col-md-10 mx-auto">
+
+        <p class="mb-1">
+          <span>
+            <i class="fas fa-utensils pr-1"></i>
+            餐廳名稱：
+          </span>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="餐廳名稱" name="name" value="{{restaurant.name}}">
+        </div>
+        </p>
+
+        <p class="mb-1">
+          <span>
+            <i class="fas fa-signature pr-1"></i>
+            英文名稱：
+          </span>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="English name" name="name_en"
+            value="{{restaurant.name_en}}">
+        </div>
+        </p>
+
+        <p class="mb-1">
+          <label for="category">
+            <i class="fas fa-filter pr-1"></i>
+            類別：
+          </label>
+        <div class="input-group">
+
+          <select id="category" class="form-control" name="category">
+            <option>{{restaurant.category}}</option>
+            <option>美式餐廳</option>
+            <option>日式餐廳</option>
+            <option>義式餐廳</option>
+            <option>中東料理</option>
+            <option>北歐咖啡</option>
+            <option>高空酒吧</option>
+          </select>
+        </div>
+        </p>
+
+        <p class="mb-1">
+          <span>
+            <i class="fas fa-map-pin pr-1"></i>
+            地址：
+          </span>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="餐廳地址" name="location" value="{{restaurant.location}}">
+        </div>
+        </p>
+
+        <p class="mb-1">
+          <span>
+            <i class="fas fa-phone pr-1"></i>
+            電話：
+          </span>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="02 2828 1234" name="phone" value="{{restaurant.phone}}">
+        </div>
+        </p>
+
+        <p class="mb-1">
+          <span>
+            <i class="fas fa-star-half-alt pr-1"></i>
+            評分：
+          </span>
+        <div class="input-group">
+          <input type="number" class="form-control" placeholder="0到5分" name="rating" placeholder="0~5" step="0.1"
+            min="0" max="5" value="{{restaurant.rating}}">
+        </div>
+        </p>
+
+
+
+        <p class="mb-1">
+          <span>
+            <i class="fas fa-info-circle pr-1"></i>
+            資訊：
+          </span>
+        <div class="input-group">
+          <textarea class="form-control" placeholder="介紹您的餐廳" name="description"
+            style="height: 5em;">{{restaurant.description}}</textarea>
+        </div>
+        </p>
+
+        <p class="mb-1">
+          <span>
+            <i class="fas fa-camera pr-1"></i>
+            照片：
+          </span>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="http://" name="image" value="{{restaurant.image}}">
+        </div>
+        </p>
+
+        <p class="mb-1">
+          <span>
+            <i class="fas fa-map-marked-alt pr-1"></i>
+            Google Map：
+          </span>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="http://" name="google_map"
+            value="{{restaurant.google_map}}">
+        </div>
+        </p>
+        <div class="text-center mb-4">
+          <button type="submit" class="mx-auto btn btn-secondary">儲存</button>
+          <a href="/">
+            <button class="ml-3 btn btn-secondary" type="button">返回</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
